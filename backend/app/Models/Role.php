@@ -17,19 +17,8 @@ class Role extends Model
     protected $guarded = [
         'id',
         'name',
-        'slug',
+        'guard_name',
         'created_at',
         'updated_at',
-        'deleted_at',
     ];
-
-    public function users()
-    {
-        return $this->belongsToMany(User::class);
-    }
-
-    public function permissions()
-    {
-        return $this->belongsToMany(Permission::class);
-    }
 }

@@ -23,19 +23,20 @@
     19 => 'Illuminate\\Translation\\TranslationServiceProvider',
     20 => 'Illuminate\\Validation\\ValidationServiceProvider',
     21 => 'Illuminate\\View\\ViewServiceProvider',
-    22 => 'Facade\\Ignition\\IgnitionServiceProvider',
-    23 => 'Fruitcake\\Cors\\CorsServiceProvider',
-    24 => 'Laravel\\Fortify\\FortifyServiceProvider',
-    25 => 'Laravel\\Sail\\SailServiceProvider',
-    26 => 'Laravel\\Sanctum\\SanctumServiceProvider',
-    27 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    28 => 'Carbon\\Laravel\\ServiceProvider',
-    29 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    30 => 'Spatie\\Permission\\PermissionServiceProvider',
-    31 => 'App\\Providers\\AppServiceProvider',
-    32 => 'App\\Providers\\AuthServiceProvider',
-    33 => 'App\\Providers\\EventServiceProvider',
-    34 => 'App\\Providers\\RouteServiceProvider',
+    22 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
+    23 => 'Facade\\Ignition\\IgnitionServiceProvider',
+    24 => 'Fruitcake\\Cors\\CorsServiceProvider',
+    25 => 'Laravel\\Fortify\\FortifyServiceProvider',
+    26 => 'Laravel\\Sail\\SailServiceProvider',
+    27 => 'Laravel\\Sanctum\\SanctumServiceProvider',
+    28 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    29 => 'Carbon\\Laravel\\ServiceProvider',
+    30 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    31 => 'Spatie\\Permission\\PermissionServiceProvider',
+    32 => 'App\\Providers\\AppServiceProvider',
+    33 => 'App\\Providers\\AuthServiceProvider',
+    34 => 'App\\Providers\\EventServiceProvider',
+    35 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -183,6 +184,8 @@
     'translation.loader' => 'Illuminate\\Translation\\TranslationServiceProvider',
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
+    'command.ide-helper.generate' => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
+    'command.ide-helper.models' => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
     'Laravel\\Sail\\Console\\InstallCommand' => 'Laravel\\Sail\\SailServiceProvider',
     'Laravel\\Sail\\Console\\PublishCommand' => 'Laravel\\Sail\\SailServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
@@ -223,6 +226,9 @@
     array (
     ),
     'Illuminate\\Validation\\ValidationServiceProvider' => 
+    array (
+    ),
+    'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider' => 
     array (
     ),
     'Laravel\\Sail\\SailServiceProvider' => 

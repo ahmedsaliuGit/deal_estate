@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Role;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class RoleSeeder extends Seeder
 {
@@ -17,39 +17,28 @@ class RoleSeeder extends Seeder
         Role::upsert([
             [
                 'name' => 'Super Admin',
-                'slug' => 'super-admin',
-                'description' => 'Super Admin has access to all the system features and settings.',
-                'is_system' => true,
-                'created_by' => 'Ahmed Saliu'
+                'guard_name' => 'api',
             ],
             [
                 'name' => 'Property Manager',
-                'slug' => 'property-manager',
-                'description' => 'Property Manager has access to manage properties and their details.',
-                'is_system' => true,
-                'created_by' => 'Ahmed Saliu'
+                'guard_name' => 'api',
+            ],
+            [
+                'name' => 'Agent',
+                'guard_name' => 'api',
             ],
             [
                 'name' => 'Accountant',
-                'slug' => 'accountant',
-                'description' => 'Accountant has access to manage financial records and reports.',
-                'is_system' => true,
-                'created_by' => 'Ahmed Saliu'
+                'guard_name' => 'api',
             ],
             [
                 'name' => 'Staff',
-                'slug' => 'staff',
-                'description' => 'Staff has access to manage daily operations.',
-                'is_system' => true,
-                'created_by' => 'Ahmed Saliu'
+                'guard_name' => 'api',
             ],
             [
                 'name' => 'Tenant',
-                'slug' => 'tenant',
-                'description' => 'Tenant has access to view and manage their rental properties.',
-                'is_system' => true,
-                'created_by' => 'Ahmed Saliu'
+                'guard_name' => 'api',
             ],
-        ], ['slug'], ['created_by']);
+        ], ['name', 'guard_name']);
     }
 }
