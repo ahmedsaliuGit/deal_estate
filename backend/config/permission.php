@@ -17,6 +17,7 @@ return [
          * `Spatie\Permission\Contracts\Permission` contract.
          */
 
+        /** @var Spatie\Permission\Models\Permission $permission */
         'permission' => Permission::class,
 
         /*
@@ -28,6 +29,7 @@ return [
          * `Spatie\Permission\Contracts\Role` contract.
          */
 
+        /** @var Spatie\Permission\Models\Role $role */
         'role' => Role::class,
 
     ],
@@ -170,7 +172,9 @@ return [
      * See documentation to understand supported syntax.
      */
 
-    'enable_wildcard_permission' => false,
+    // Enable wildcard permissions to allow alternative matching approaches when
+    // the default implementation does not work for complex permission checks.
+    'enable_wildcard_permission' => true,
 
     /*
      * The class to use for interpreting wildcard permissions.
