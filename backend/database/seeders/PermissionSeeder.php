@@ -17,126 +17,128 @@ class PermissionSeeder extends Seeder
         $permissions = [
             // Properties
             [
-                'name' => 'View Properties',
+                'name' => 'view properties',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Create Property',
+                'name' => 'create property',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Edit Property',
+                'name' => 'edit property',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Delete Property',
+                'name' => 'delete property',
                 'guard_name' => 'api',
             ],
 
             // Tenants
             [
-                'name' => 'View Tenants',
+                'name' => 'view tenants',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Create Tenant',
+                'name' => 'create tenant',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Edit Tenant',
+                'name' => 'edit tenant',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Delete Tenant',
+                'name' => 'delete tenant',
                 'guard_name' => 'api',
             ],
 
             // Payments
             [
-                'name' => 'View Payments',
+                'name' => 'view payments',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Create Payment',
+                'name' => 'create payment',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Edit Payment',
+                'name' => 'edit payment',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Delete Payment',
+                'name' => 'delete payment',
                 'guard_name' => 'api',
             ],
 
             // Users
             [
-                'name' => 'View Users',
+                'name' => 'view users',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Create User',
+                'name' => 'create user',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Edit User',
+                'name' => 'edit user',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Delete User',
+                'name' => 'delete user',
                 'guard_name' => 'api',
             ],
 
             //  units
             [
-                'name' => 'View Units',
+                'name' => 'view units',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Create Unit',
+                'name' => 'create unit',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Edit Unit',
+                'name' => 'edit unit',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Delete Unit',
+                'name' => 'delete unit',
                 'guard_name' => 'api',
             ],
 
             // Reports
             [
-                'name' => 'View Reports',
+                'name' => 'view reports',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Generate Report',
+                'name' => 'generate report',
                 'guard_name' => 'api',
             ],
 
             // Maintenance
             [
-                'name' => 'View Maintenance Requests',
+                'name' => 'view maintenance requests',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Create Maintenance Request',
+                'name' => 'create maintenance request',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Edit Maintenance Request',
+                'name' => 'edit maintenance request',
                 'guard_name' => 'api',
             ],
             [
-                'name' => 'Delete Maintenance Request',
+                'name' => 'delete maintenance request',
                 'guard_name' => 'api',
             ],
         ];
 
-    Permission::upsert(
+        Permission::upsert(
             $permissions,
             ['name', 'guard_name']
         );
+
+        app(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
     }
 }
