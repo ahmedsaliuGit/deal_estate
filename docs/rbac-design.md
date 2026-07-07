@@ -79,6 +79,14 @@ Implement Role-Based Access Control (RBAC) for the Property Management System.
 | reports.view       | ✅          | ✅     | ✅        | ❌      | ❌     |
 | maintenance.create | ✅          | ✅     | ❌        | ✅      | ✅     |
 
+
+| Module     | Permission      | Super Admin | Admin | Property Manager |   Agent  |  Tenant  |
+| ---------- | --------------- | :---------: | :---: | :--------------: | :------: | :------: |
+| Users      | view users      |      ✅     |  ✅  |        ❌        |   ❌    |    ❌    |
+| Users      | create users    |      ✅     |  ✅  |        ❌        |   ❌    |    ❌    |
+| Properties | edit properties |      ✅     |  ✅  |        ✅        | Limited* |    ❌    |
+| Payments   | view payments   |      ✅     |  ✅  |        ❌        |   ❌    | Limited*  |
+
 ---
 
 ## Database Tables
